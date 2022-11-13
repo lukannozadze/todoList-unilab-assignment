@@ -14,7 +14,7 @@ const WelcomePage = () => {
       <h1 className="text-[36px] text-center text-[#ffffff] font-poppins">
         Keep Track Of Daily Tasks In Life
       </h1>
-      <button className="bg-[#5efc8d] w-[190px] font-poppins text-[22px] mt-[40px] pt-[15px] pb-[15px] rounded-[4px]">
+      <button className="bg-[#5efc8d] w-[190px] font-poppins text-[22px] mt-[40px] pt-[15px] pb-[15px] rounded-[4px] hover:bg-[#ffffff]">
         Get Started
       </button>
     </div>
