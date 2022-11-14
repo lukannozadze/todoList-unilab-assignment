@@ -1,5 +1,6 @@
 import React from "react";
 import landingImgPath from "../../assets/landing-image.png";
+import { Link } from "react-router-dom";
 
 const WelcomePage = () => {
   return (
@@ -15,7 +16,7 @@ const WelcomePage = () => {
         Keep Track Of Daily Tasks In Life
       </h1>
       <button className="bg-[#5efc8d] w-[190px] font-poppins text-[22px] mt-[40px] mb-[20px] pt-[15px] pb-[15px] rounded-[4px] hover:bg-[#ffffff]">
-        Get Started
+        <Link to="/registration">Get Started</Link>
       </button>
     </div>
   );
