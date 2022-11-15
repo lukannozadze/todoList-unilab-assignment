@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 const TodoInput = (props) => {
   const [currentItem, setCurrentItem] = useState("");
   const addBtnClickHandler = (e) => {
-    e.preventDefault();
-    props.onGetItemData(data);
-    setCurrentItem("");
+    if (currentItem === "") {
+      e.preventDefault();
+    } else {
+      e.preventDefault();
+      props.onGetItemData(data);
+      setCurrentItem("");
+    }
   };
-  const nameInputChangeHandler = (e) => {
+  const todoInputChangeHandler = (e) => {
     setCurrentItem(e.target.value);
   };
   let data = {
@@ -27,7 +31,7 @@ const TodoInput = (props) => {
         <input
           className="w-[300px] pt-[15px] pb-[15px] bg-[#e6ebff] rounded-[4px] pl-[13px] outline-none"
           type="text"
-          onChange={nameInputChangeHandler}
+          onChange={todoInputChangeHandler}
           name="todo"
           value={currentItem}
           placeholder="my task"
