@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 const TodoInput = (props) => {
   const [currentItem, setCurrentItem] = useState("");
   const addBtnClickHandler = (e) => {

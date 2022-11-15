@@ -4,15 +4,24 @@ const ListItem = (props) => {
   const deleteBtnHandler = (e) => {
     props.onDeleteTodo(props.data.id);
   };
+  const doneBtnHandler = (e) => {
+    props.onDoneTodo(props.data.id);
+  };
+
   return (
     <div className="relative">
       <li
         key={props.data.id}
-        className="w-[350px]  bg-[#000000] text-[#ffffff] rounded-[4px] flex items-center pl-[15px] mb-[12px] pt-[10px] pb-[10px]"
+        className={`w-[350px]  bg-[#000000] text-[#ffffff] rounded-[4px] flex items-center pl-[15px] mb-[12px] pt-[10px] pb-[10px] ${
+          !props.data.active ? "bg-[#A0A0A0]" : ""
+        }`}
       >
         {props.data.listItem}
 
-        <button className="absolute top-[15px] right-[38px]">
+        <button
+          onClick={doneBtnHandler}
+          className="absolute top-[15px] right-[38px]"
+        >
           <img src={doneMarkPath} alt="done mark" />
         </button>
         <button
