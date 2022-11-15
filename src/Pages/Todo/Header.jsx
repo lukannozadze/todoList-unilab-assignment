@@ -8,7 +8,7 @@ const Header = () => {
           <img
             className="w-[100%] h-[100%] rounded-[50%]"
             src={localStorage.getItem("imgPath")}
-            alt="user photo"
+            alt="user img"
           />
         </div>
       </div>

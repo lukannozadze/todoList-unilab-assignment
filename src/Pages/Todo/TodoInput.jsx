@@ -1,4 +1,19 @@
-const TodoInput = () => {
+import React, { useState } from "react";
+const TodoInput = (props) => {
+  const [currentItem, setCurrentItem] = useState("");
+  const addBtnClickHandler = (e) => {
+    e.preventDefault();
+    props.onGetItemData(data);
+  };
+  const nameInputChangeHandler = (e) => {
+    setCurrentItem(e.target.value);
+  };
+  let data = {
+    listItem: currentItem,
+    id: Math.random().toString(),
+    active: true,
+  };
+
   return (
     <form className="flex flex-col items-center mt-[34px]">
       <label
@@ -11,10 +26,14 @@ const TodoInput = () => {
         <input
           className="w-[300px] pt-[15px] pb-[15px] bg-[#e6ebff] rounded-[4px] pl-[13px] outline-none"
           type="text"
+          onChange={nameInputChangeHandler}
           name="todo"
           placeholder="my task"
         ></input>
-        <button className="bg-[#5efc8d] pt-[15px] pb-[15px] pl-[8px] pr-[8px] rounded-[4px]">
+        <button
+          onClick={addBtnClickHandler}
+          className="bg-[#5efc8d] pt-[15px] pb-[15px] pl-[8px] pr-[8px] rounded-[4px]"
+        >
           Add
         </button>
       </div>

@@ -41,7 +41,7 @@ const UploadArea = () => {
             <img
               className="w-[100%] h-[100%] rounded-[50%]"
               src={preview}
-              alt="uploaded image"
+              alt="uploaded img"
             />
           ) : (
             <img
