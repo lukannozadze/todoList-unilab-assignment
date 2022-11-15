@@ -4,6 +4,7 @@ const TodoInput = (props) => {
   const addBtnClickHandler = (e) => {
     e.preventDefault();
     props.onGetItemData(data);
+    setCurrentItem("");
   };
   const nameInputChangeHandler = (e) => {
     setCurrentItem(e.target.value);
@@ -28,6 +29,7 @@ const TodoInput = (props) => {
           type="text"
           onChange={nameInputChangeHandler}
           name="todo"
+          value={currentItem}
           placeholder="my task"
         ></input>
         <button
