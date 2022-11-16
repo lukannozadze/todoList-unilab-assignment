@@ -12,10 +12,13 @@ const WelcomePage = () => {
           alt="screen icon with green correction mark"
         />
       </div>
-      <h1 className="text-[36px] text-center text-[#ffffff] font-poppins">
+      <h1 className="text-[36px] text-center text-[#ffffff] font-poppins sm:text-[40px] lg:text-[48px] def:text-[54px] leading-[81px]">
         Keep Track Of Daily Tasks In Life
       </h1>
-      <button className="bg-[#5efc8d] w-[190px] font-poppins text-[22px] mt-[40px] mb-[20px] pt-[15px] pb-[15px] rounded-[4px] hover:bg-[#ffffff]">
+      <button
+        className="bg-[#5efc8d] w-[190px] font-poppins text-[22px] mt-[40px] mb-[20px] pt-[15px] pb-[15px] rounded-[4px] hover:bg-[#ffffff] 
+      sm:text-[26px] sm:w-[210px] sm:mt-[70px] lg:text-[30px] lg:w-[240px] lg:mt-[80px] def:text-[48px] def:w-[388px] def:leading-[72px] def:mt-[149px] "
+      >
         <Link to="/registration">Get Started</Link>
       </button>
     </div>
