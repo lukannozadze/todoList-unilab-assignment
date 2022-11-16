@@ -39,7 +39,7 @@ const TodoInput = (props) => {
         <button
           onClick={addBtnClickHandler}
           className="bg-[#5efc8d] pt-[15px] pb-[15px] pl-[8px] pr-[8px] rounded-[4px] lg:text-[20px] lg:pl-[10px] lg:pr-[10px] def:text-[22px] def:pt-[18px] def:pb-[21px]
-           def:w-[108px]"
+           def:w-[108px] hover:bg-[#000000] hover:text-[#ffffff]"
         >
           Add
         </button>
