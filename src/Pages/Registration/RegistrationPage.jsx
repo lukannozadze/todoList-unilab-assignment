@@ -2,7 +2,16 @@ import Card from "./Card";
 import UploadArea from "./UploadArea";
 import NameInput from "./NameInput";
 import SignInBtn from "./SignInBtn";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 const RegistrationPage = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.length === 2) {
+      navigate("/todo");
+    }
+  }, []);
   return (
     <div className="w-screen h-screen bg-[#000000] flex justify-center items-center">
       <Card>

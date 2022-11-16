@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
+import { useNavigate } from "react-router-dom";
 const TodoPage = () => {
   const [listArr, setListArr] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.length === 0) {
+      navigate("/");
+    }
+  }, []);
 
   const copyListArr = listArr.slice();
   const getItemData = (data) => {

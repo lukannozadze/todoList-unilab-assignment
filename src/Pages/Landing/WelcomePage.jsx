@@ -1,8 +1,15 @@
 import React from "react";
 import landingImgPath from "../../assets/landing-image.png";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.length === 2) {
+      navigate("/todo");
+    }
+  }, []);
   return (
     <div className="w-screen h-screen bg-[#000000] flex flex-col items-center gap-[76px] ">
       <div className="mt-[104px]">
