@@ -34,9 +34,12 @@ const UploadArea = () => {
 
   return (
     <form className="mt-[40px]">
-      <label htmlFor="img">
+      <label
+        className="sm:text-[18px] lg:text-[20px] def:text-[22px] flex flex-col items-center"
+        htmlFor="img"
+      >
         add a photo
-        <div className="w-[100px] h-[100px] rounded-[50%] bg-[#e6ebff] flex justify-center items-center mt-[10px] mb-[63px] ">
+        <div className="w-[100px] h-[100px] rounded-[50%] bg-[#e6ebff] flex justify-center items-center mt-[10px] mb-[63px] lg:w-[110px] lg:h-[110px] def:w-[122px] def:h-[122px] ">
           {preview ? (
             <img
               className="w-[100%] h-[100%] rounded-[50%]"
