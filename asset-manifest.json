@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/todo-app-unilab-assignment/static/css/main.10599c48.css",
-    "main.js": "/todo-app-unilab-assignment/static/js/main.17beaf73.js",
-    "index.html": "/todo-app-unilab-assignment/index.html",
-    "main.10599c48.css.map": "/todo-app-unilab-assignment/static/css/main.10599c48.css.map",
-    "main.17beaf73.js.map": "/todo-app-unilab-assignment/static/js/main.17beaf73.js.map"
+    "main.css": "/todoList-unilab-assignment/static/css/main.10599c48.css",
+    "main.js": "/todoList-unilab-assignment/static/js/main.17beaf73.js",
+    "index.html": "/todoList-unilab-assignment/index.html",
+    "main.10599c48.css.map": "/todoList-unilab-assignment/static/css/main.10599c48.css.map",
+    "main.17beaf73.js.map": "/todoList-unilab-assignment/static/js/main.17beaf73.js.map"
   },
   "entrypoints": [
     "static/css/main.10599c48.css",
