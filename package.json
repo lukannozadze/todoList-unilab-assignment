@@ -1,5 +1,5 @@
 {
-  "homepage": "http://lukannozadze.github.io/todo-app-unilab-assignment",
+  "homepage": "http://lukannozadze.github.io/todoList-unilab-assignment",
   "name": "todo-app-unilab-assignment",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build ",
+    "deploy": "gh-pages -d build ",
     "build": "react-scripts build",
     "build-css": "tailwindcss build src/index.css -o public/index.css",
     "eject": "react-scripts eject"
