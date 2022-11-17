@@ -30,7 +30,6 @@ const UploadArea = () => {
       setIsImage(null);
     }
   };
-  console.log(preview);
 
   return (
     <form className="mt-[40px]">
