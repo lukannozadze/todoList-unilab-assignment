@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const RegistrationPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.length === 2) {
+    if (localStorage.length === 3) {
       navigate("/todo");
     }
   }, []);

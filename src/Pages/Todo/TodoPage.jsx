@@ -8,20 +8,37 @@ const TodoPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    if (localStorage.getItem("todoListArr") !== null) {
+      setListArr(JSON.parse(localStorage.getItem("todoListArr")));
+    }
+  }, []);
+
+  useEffect(() => {
     if (localStorage.length === 0) {
       navigate("/");
     }
   }, []);
 
   const copyListArr = listArr.slice();
+
   const getItemData = (data) => {
     setListArr((prevState) => [...prevState, data]);
+    localStorage.setItem("todoListArr", JSON.stringify([...listArr, data]));
   };
+
   const deleteTodo = (id) => {
     setListArr(
       copyListArr.filter((item) => {
         return item.id !== id;
       })
+    );
+    localStorage.setItem(
+      "todoListArr",
+      JSON.stringify(
+        copyListArr.filter((item) => {
+          return item.id !== id;
+        })
+      )
     );
   };
   const doneTodo = (id) => {
@@ -32,6 +49,7 @@ const TodoPage = () => {
       return item;
     });
     setListArr(changedArr);
+    localStorage.setItem("todoListArr", JSON.stringify(changedArr));
   };
   return (
     <div className="w-screen h-screen font-poppins flex flex-col items-center">
