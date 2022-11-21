@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 const WelcomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.length === 2) {
+    if (localStorage.length === 3) {
       navigate("/todo");
     }
   }, []);
